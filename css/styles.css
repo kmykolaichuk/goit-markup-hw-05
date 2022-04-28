@@ -119,6 +119,10 @@ img {
   display: flex;
 }
 
+.header-item {
+  position: relative;
+}
+
 .header-item:not(:last-child) {
   margin-right: 50px;
 }
@@ -141,6 +145,19 @@ img {
 
 .header-link.current {
   color: var(--accent-color);
+}
+
+.header-link.current::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+  transform: translateY(1px);
 }
 
 .contacts {
